@@ -1,0 +1,69 @@
+<!--pages/clean/clean.wxml-->
+<!-- 清洁页 -->
+<view class="clean">
+  <view  class="clean-tabs">
+    <van-grid gutter="{{ 8 }}">
+      <van-grid-item icon="icon/保洁.png" text="日常清洁" bindtap="jumpCleankt"/>
+      <van-grid-item icon="icon/油烟机.png" text="油烟机清洁"  bindtap="jumpCleanyyj"/>
+      <van-grid-item icon="icon/洗衣机.png" text="洗衣机清洁" bindtap="jumpCleankt" />
+      <van-grid-item icon="icon/冰箱.png" text="冰箱清洁"  bindtap="jumpCleankt"/>
+      <van-grid-item icon="icon/周期.png" text="定期清洁" bindtap="jumpCleankt" />
+      <van-grid-item icon="icon/空调.png" text="空调清洁" bindtap="jumpCleankt" />
+      <van-grid-item icon="icon/除虫.png" text="除螨清洁" bindtap="jumpCleancm"/>
+      <van-grid-item icon="icon/地板.png" text="地板保养" bindtap="jumpCleankt" />
+    </van-grid>
+  </view>
+  <!-- 热销  -->
+  <view class="hotsale">
+    <view class="hotsale-head">热销单品</view>
+    <view class="hotsale-body">
+      <image src="cloud://web1907-5gual.7765-web1907-5gual-1301373168/houseKeeping/dsc.jpg"
+      class="hotsale-img" bindtap="jumpCleandsc"></image>
+      <image src="cloud://web1907-5gual.7765-web1907-5gual-1301373168/houseKeeping/zqxd.jpg"
+      class="hotsale-img" bindtap="jumpCleanzqxd"></image>
+    </view>
+  </view> 
+  <!-- 推荐 -->
+  <view class="recommend">  
+    <view class="recommend-head">为您推荐</view>
+    <view class="recommend-body">
+      <view class="rec-info" bindtap="jumpCleankt">
+        <image src="cloud://web1907-5gual.7765-web1907-5gual-1301373168/houseKeeping/空调清洗.jpg"
+        class="rec-img"></image>
+        <view class="rec-right">
+          <view class="rec-title">空调清洗</view>
+          <view class="rec-desc">保持室内空气洁净,享受高品质环境，延长空调寿命，降低电耗，节省电费</view>
+          <view class="rec-price">¥88起</view>
+        </view>
+      </view>
+      <view class="rec-info" bindtap="jumpCleanyyj">
+        <image src="cloud://web1907-5gual.7765-web1907-5gual-1301373168/houseKeeping/油烟机清洗.jpg"
+        class="rec-img"></image>
+        <view class="rec-right">
+          <view class="rec-title">油烟机清洗</view>
+          <view class="rec-desc">除油消毒，让您告别油烟熏呛，消除厨房安全隐患</view>
+          <view class="rec-price">¥180起</view>
+        </view>
+      </view>
+      <view class="rec-info" bindtap="jumpCleancm">
+        <image src="cloud://web1907-5gual.7765-web1907-5gual-1301373168/houseKeeping/新居开荒.jpg"
+        class="rec-img"></image>
+        <view class="rec-right">
+          <view class="rec-title">新居开荒</view>
+          <view class="rec-desc">新居不染一尘,为您的新家提供全方位的清洁方案</view>
+          <view class="rec-price">¥720起</view>
+        </view>
+      </view>
+      
+      <view class="rec-info" bindtap="jumpCleancm">
+        <image src="cloud://web1907-5gual.7765-web1907-5gual-1301373168/houseKeeping/除螨清洁.jpg"
+        class="rec-img"></image>
+        <view class="rec-right">
+          <view class="rec-title">除螨清洁</view>
+          <view class="rec-desc">消灭螨虫危害，高温蒸汽杀毒，还您健康的居住环境</view>
+          <view class="rec-price">¥580起</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,38 @@
+/* pages/yuesaolist/yuesaolist.wxss */
+/* 月嫂列表 */
+/* 外层父元素 */
+.yuesao{
+  display:flex; 
+  padding:10rpx;
+  border-bottom:1rpx solid #ccc
+}
+/* 左侧图片区 */
+.yuesao-img{
+  width:200rpx;height:300rpx;
+  margin-right:20rpx;
+}
+/* 右侧月嫂介绍 */
+.yuesao-info{
+  flex:1;
+  line-height: 1.8;
+  font-size: 28rpx; 
+}
+/* 月嫂标题 */
+.yuesao-title{
+  font-size: 35rpx;
+}
+/* 月嫂信息 */
+.yuesao-msg{
+  color:#777;
+}
+/* 月嫂所在地 */
+.position{
+  color:#e0c31f
+}
+/* 底部提示文字 */
+.nomore{
+  color:#999;
+  text-align:center;
+  padding:22rpx;
+  font-size: 25rpx;
+}

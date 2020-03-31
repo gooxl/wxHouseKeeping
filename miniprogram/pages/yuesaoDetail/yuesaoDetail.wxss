@@ -1,0 +1,204 @@
+/* pages/yuesaoDetail/yuesaoDetail.wxss */
+/* 外层父元素 */
+.cantainer{
+  display: flex;
+  flex-direction: column; 
+  /* justify-content: space-between; */
+  /* box-sizing: border-box;
+  height: 100%; */
+
+}
+/* 背景图 */
+.detail-bg{
+  height:350rpx;
+  opacity: 0.9;
+  filter:blur(40rpx)
+}
+/* 遮罩层 */
+.detail-mask{
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:-1;
+  width:100%;
+  height:350rpx;
+  background:#eee;
+}
+/* 人物详情 */
+.detail-info{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:350rpx;
+  display:flex;
+  line-height: 50rpx;
+}
+/* 左侧图片 */
+.detail-img{
+  width:280rpx;
+  height:94%; 
+  margin-right:28rpx;
+  margin-left:20rpx;
+  border-radius:5%;
+}
+/* 右侧人物介绍 */
+.detail{
+  line-height:50rpx;
+  font-size: 25rpx;
+}
+.title{
+  font-size:40rpx;
+  padding-top:10rpx; 
+}
+.msg{
+  color:#555;
+  padding-top:20rpx;
+}
+/* 价钱 */
+.price{
+  font-size: 40rpx;
+  color:#e94941;
+  padding-top:10rpx;
+}
+/* 资料组件 */
+ .tabs{
+  margin-top:20rpx;
+  width:100%;
+} 
+/* 标签1：基本信息 */
+.tab{
+  padding:0 20rpx;
+}
+/* 每条信息外层元素 */
+.data{
+  display:flex; 
+  flex-flow:row;
+  border-bottom: 1rpx solid #f5f5f5;
+  line-height: 70rpx;
+  color:#777;
+  font-size: 32rpx;
+}
+.data view{
+  width:50%;
+  display: inline-block;
+}
+/* 信息右 */
+.right{
+  text-align:right;
+}
+/* 证件照片 */
+.id-photo{
+  width:100%;
+}
+.id-photo-head{
+  display:flex; 
+  padding-left:20rpx;
+  margin-top:20rpx;
+}
+.id-photo-icon{
+  width:50rpx;
+  height:50rpx;
+  padding-right:10rpx;
+}
+.id-photo-title{
+  font-weight:bold;
+  padding-right:10rpx;
+}
+.id-photo-body{
+  padding-left:10rpx;
+  margin-left:20rpx; 
+  width:94%;
+  background-color: #eee;
+  color:#777;
+  border-radius:5%;
+}
+/* 评价 */
+.comment{
+  margin-left:30rpx;
+  margin-top:20rpx;
+  width:100%
+}
+/* 评价头 */
+.comment-head{
+  display:flex;
+}
+.comment-head view{
+  width:50%;
+  display:inline-block;
+}
+.comment-title-left{
+ font-weight:bold;
+}
+.comment-title-right{
+  text-align: right;
+  color: #ff9922;
+  font-size: 30rpx;
+  padding-right: 30rpx;
+}
+.comment-icon{
+  width:50rpx;
+  height:50rpx;
+  padding-right:10rpx;
+}
+.comment-title{
+  font-weight:bold;
+  padding-right:10rpx;
+}
+.comment-count{
+  font-size: 25rpx;
+}
+/* 评价主体 */
+.comment-body{
+  /* display: flex; */
+  margin-left: 10rpx;
+  margin-top:10rpx;
+}
+.comment-body-umsg{
+  display: flex;
+}
+.comment-body-icon{
+  width:70rpx;
+  height:70rpx;
+  padding-right:10rpx;
+}
+.comment-body-user{
+  height: 72rpx;
+}
+.comment-body-uname{
+  font-size: 28rpx;
+  height:38rpx;
+  padding-left:6rpx;
+}
+.comment-body-utext{
+  padding-left:18rpx;
+}
+.comment-body-uimg{
+  padding-left:18rpx;
+}
+.comment-body-uimg image{
+  margin-right: 10rpx;
+  width: 220rpx;
+  height: 220rpx;
+}
+/* 空白区顶起被底部按钮遮盖的内容 */
+.placeholder{
+  height:100rpx;
+  
+}
+/* 底部按钮 */
+.btn-view{
+  background-color: #fff;
+  z-index: 1;
+  position:fixed;
+  bottom:0;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width:100%;
+}
+.btn-view button{
+  width:360rpx; 
+
+
+}

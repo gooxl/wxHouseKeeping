@@ -1,0 +1,32 @@
+/* pages/home/home.wxss */
+/* 顶部搜索栏 */
+.top{
+  width:100%;
+  height:60rpx;
+}
+/* 轮播图 */
+.slider, .slider swiper,.slider image{
+  height:250rpx;
+  width:100%
+}
+/* 中间标题 */
+.m-title{
+  font-size: 35rpx;
+  padding-top:20rpx;
+  padding-bottom:10rpx;
+  list-style: center;
+  color:#777;
+  text-align: center;
+  font-weight: bolder
+}
+/*城市按钮*/
+.city{
+  width:120rpx;
+  font-size:40rpx;
+  
+  }
+.b{
+
+  border:1rpx solid #888;
+  background-color: #aaf
+}

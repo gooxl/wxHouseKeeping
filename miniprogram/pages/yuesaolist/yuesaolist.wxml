@@ -1,0 +1,16 @@
+<!--pages/yuesaolist/yuesaolist.wxml-->
+<!-- 月嫂列表 -->
+
+<view  wx:for="{{list}}" wx:key="index" class="yuesao" bindtap="jumpDetail" data-id="{{item._id}}">
+    <image class="yuesao-img" src="{{item.fileID}}"></image>
+    <view class="yuesao-info">
+      <view class="yuesao-title">【{{item.surname}}阿姨】{{item.type}} </view>
+      <view class="yuesao-msg">{{item.age}}岁 | {{item.region}}人 | 从业{{item.exp}}个月</view>
+      <view class="position">当前所在地：{{item.region}}</view>
+      <van-tag plain type="danger" size="medium" wx:for="{{item.tag}}" 
+      wx:key="index" style="margin-right:5rpx;">
+      {{item}}</van-tag>
+    </view>
+</view>
+<text class="nomore">————没有更多了————</text>
+

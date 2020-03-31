@@ -1,0 +1,114 @@
+/* pages/cooking/cooking.wxss */
+.cooking image{
+  width:100%;
+}
+/* 价钱 */
+.price{
+  padding-left: 20rpx;
+  font-size: 50rpx;
+  font-weight: bold;
+  color: red;
+}
+.price :first-child{
+  font-size: 35rpx;
+}
+.price :nth-child(3){
+  padding-left: 25rpx;
+  color:#666;
+  text-decoration: line-through;
+  font-size: 20rpx;
+}
+/* 标题 */
+.title{
+  padding:20rpx;
+  border-bottom:1rpx solid #ccc; 
+}
+.title :last-child{
+  color:#777;
+  font-size: 28rpx;
+}
+/* 服务 */
+.pro{
+  padding:20rpx 30rpx 20rpx 20rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom:1rpx solid #ccc; 
+}
+.pro view{
+  width:50%;
+} 
+.pro :last-child{
+  text-align: right;
+  color:#fa9d33;
+  font-weight: bold;
+} 
+/* 上拉菜单  */
+.actionSheet{
+  display: flex;
+  padding:30rpx;
+  position:relative;
+}
+.actionSheet image{
+  width:180rpx;
+  height:180rpx;
+  padding-right: 20rpx;
+}
+.actionSheet-title{
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.actionSheet-desc{
+  color:#777;
+  font-size: 24rpx;
+}
+.actionSheet-price{
+  font-size: 35rpx;
+  font-weight: bold;
+  color: red;
+  bottom:10%;
+  position:absolute;
+
+}
+.actionSheet-price :first-child{
+  font-size: 30rpx;
+}
+.actionSheet-price :nth-child(3){
+  padding-left: 25rpx;
+  color:#666;
+  text-decoration: line-through;
+  font-size: 22rpx;
+}
+.actionSheet-btns{
+  border-top:1rpx solid #ccc;
+  padding-top:20rpx;
+  padding-bottom:50rpx;
+  display: flex;
+  justify-content: space-around;
+  height: 260rpx;
+}
+.actionSheet-btns .btn{
+  border-radius: 50rpx;
+  border:1rpx solid #ccc;
+  width:300rpx;
+  height:75rpx;
+  font-size: 30rpx;
+  margin: 20rpx;
+  text-align: center;
+  font-weight: bold;
+  padding-top:20rpx;
+}
+.actionSheet-btns .btn.active{
+  background-color: #e94941;
+  color: #fff;
+}
+/*  */
+.placehold{
+  height:70rpx;
+} 
+.clean-btn{
+  width:100%;
+  position:fixed;
+  bottom: 0;
+ 
+}
+

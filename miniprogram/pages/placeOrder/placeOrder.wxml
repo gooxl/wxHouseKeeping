@@ -1,0 +1,114 @@
+<!--pages/placeOrder/placeOrder.wxml-->
+<view class="placeOrder">
+  <!-- 商品栏 -->
+  <view class="product" wx:for="{{list}}" wx:key="index">
+    <van-card
+    price="{{item.newPrice}}"
+    origin-price="{{item.oldPrice}}"
+    desc="{{item.desc}}"
+    title="{{item.pname}}"
+    thumb="{{item.headImg}}"
+    />
+  </view>
+  <!-- 服务地址 -->
+  <view class="sadd">
+    <mp-cells bindtap="onOpenAdd" >
+      <mp-cell  title="服务地址" link hover  footer="请选择">
+        <view class="sadd-info" wx:for="{{userMsg}}" wx:key="name">
+          <view>{{item.address}}</view>
+          <view >
+          <text>{{item.uname}}</text>
+          <text>{{item.phone}}</text>
+        </view>
+
+        </view>
+      </mp-cell>
+    </mp-cells>
+
+
+  </view>
+  <!-- <view>服务地址</view>
+  <view >
+    <view>广东省广州市番禺区清河东路319号(广州市番禺区人民政府)</view>
+    <text>jack </text>
+    <text> 13430318005</text>
+  </view> -->
+  <!-- <van-icon name="arrow" size="30px" color="#ddd"/> -->
+
+  <!-- 服务时间 -->
+  <view class="sdate">
+    <van-cell-group>
+      <van-cell title="服务时间" value="请选择" size="large" is-link prop="date" />
+      <picker data-field="date" mode="date" value="{{date}}" 
+        start="2020-03-01" end="2025-01-01" bindchange="dateChange">
+          <view class="sdate-info">
+
+            <view>{{date}}</view>
+            <van-icon name="arrow" size="50rpx" color="#ddd" class="sdate-icon"/>
+          </view>
+        </picker>
+
+    </van-cell-group>
+    <!-- <mp-cells >
+      <mp-cell prop="date" title="服务时间" >
+        
+      </mp-cell>
+    </mp-cells> -->
+  </view>
+
+  <!-- 备注 -->
+  <view class="remarks">
+    <view>备注</view>
+    <textarea placeholder="请输入" bind:change="remarksChange"></textarea>
+  </view>
+  <!-- 地址上拉菜单 -->
+  <van-action-sheet show="{{ showAdd }}"  bind:close="onCloseAdd">
+    <view class="address-action">
+      <!-- 无可选地址显示页 -->
+      <!-- <view class="noAdd" wx:if="{{!address}}">
+        <image src="/../../images/暂无内容.png"></image>
+        <view>您暂无可用地址</view>
+      </view> -->
+      <!-- 有地址显示页 -->
+      <view class="addlist" wx:for="{{userMsg}}" wx:key="index">
+        <van-radio-group value="{{ radio }}" bind:change="onChange">
+          <van-radio name="{{index+1}}" class="add" bindclick="onClick">
+            <view class="usermsg">
+              <view class="add-msg">
+                <text>{{item.uname}} </text>
+                <text>{{item.phone}}</text>
+                <view>{{item.address}}</view>
+              </view>
+              <!-- 修改地址按钮 -->
+              <view  class="add-icon" >
+                <van-icon name="edit" color="#888" size="50rpx" />
+              </view>
+            </view>
+          </van-radio>
+        </van-radio-group>
+      </view>
+    </view>
+    <van-button type="info" block round size="large" 
+    class="add-btn" bindtap="jumpAdd">新增服务地址</van-button>
+  </van-action-sheet>
+  <!-- 时间上拉菜单  -->
+  <van-action-sheet show="{{ showDate }}"  bind:close="onCloseDate">
+   <van-datetime-picker
+    type="datetime"
+    value="{{ currentDate }}"
+    min-date="{{ minDate }}"
+    max-date="{{ maxDate }}"
+    bind:input="onInput"
+    />
+  </van-action-sheet>
+  <!-- 提交按钮 -->
+  <view class="sub-btn">
+   <van-submit-bar
+    price="{{ total }}"
+    button-text="提交订单"
+    bind:submit="onSubmit"
+    
+   />  
+  </view>
+ 
+</view>

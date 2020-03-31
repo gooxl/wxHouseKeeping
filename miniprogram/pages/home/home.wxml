@@ -1,0 +1,50 @@
+<!--pages/home/home.wxml-->
+<!-- 家政通首页 -->
+<!-- 搜索条 -->
+<view class="top">
+  
+
+  <input type="text" placeholder="标签搜索"></input>
+  <!-- <van-popup
+  show="{{ show }}"
+  position="left"
+  custom-style="height: 30%;"
+  bind:close="onClose"
+/> -->
+</view>
+<!-- 轮播图 -->
+<view class="container">
+  <view class="slider">
+    <swiper autoplay interval="{{5000}}" indicator-dots wx:for="{{fileID}}" wx:key="index">
+      <swiper-item >
+        <image src="cloud://web1907-5gual.7765-web1907-5gual-1301373168/houseKeeping/carousel1.jpg" lazy-load></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="cloud://web1907-5gual.7765-web1907-5gual-1301373168/houseKeeping/carousel2.jpg" lazy-load></image>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>
+<!-- 九宫格 -->
+<van-grid column-num="3">
+  <van-grid-item icon="icon/预约.png" text="快速预约" bindtap="jumpOrder"/>
+  <van-grid-item icon="icon/保洁.png" text="清洁" bindtap="jumpClean"/>
+  <van-grid-item icon="icon/做饭.png" text="做饭" bindtap="jumpCooking"/>
+  <van-grid-item icon="icon/保姆.png" text="保姆" bindtap="jumpYuesaolist"/>
+  <van-grid-item icon="icon/月嫂.png" text="月嫂" bindtap="jumpYuesaolist"/> 
+  <van-grid-item icon="icon/计算器.png" text="工资计算"/> 
+  <van-grid-item icon="icon/门店.png" text="附近门店"/>
+  <van-grid-item icon="icon/附近.png" text="附近的保姆"/>
+  <van-grid-item icon="icon/问题.png" text="常见问题"/>  
+</van-grid>
+<view class="m-title">热销品类</view>
+<!-- 卡片 -->
+<van-card wx:for="{{hotlist}}" wx:key="index"
+  tag="{{item.tag}}"
+  price="{{item.price}}"
+  title="{{item.title}}"
+  desc="{{item.desc}}"
+  thumb="{{item.fileIDs[0]}}"
+  bindtap="{{item.jump}}"
+>
+</van-card>

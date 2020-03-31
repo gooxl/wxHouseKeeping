@@ -1,0 +1,59 @@
+<!--pages/addAddress/addAddress.wxml-->
+<!-- 添加地址 -->
+<view class="addAddress">
+  <van-cell-group>
+    <van-field
+      value="{{ uname }}"
+      clearable
+      label="姓名"
+      placeholder="请输入联系人"
+      bindchange="nameChange"
+    />
+     <van-field
+      clearable
+      value="{{ phone }}"
+      label="手机号"
+      placeholder="请输入手机号码"
+      error-message="{{telMsg}}"
+      bindchange="telChange"
+    />
+    <van-field
+      value="{{ address }}"
+      type="textarea"
+      label="地址"
+      icon="location-o"
+      placeholder="请选择"
+      bindtap="getLocation"
+      autosize
+    /> 
+    <van-field
+      value="{{ addNum }}"
+      clearable
+      label="门牌号"
+      placeholder="例：9号楼905室"
+      bindchange="addNumChange"
+    />
+    <van-field
+    value="{{ areas[area] }}"
+    clearable
+    label="家庭面积"
+    placeholder="请选择"
+    bindchange="areaChange"
+    bindtap="onOpen"
+    />
+    <!-- 面积下拉菜单  -->
+    <van-popup show="{{ show }}" bind:close="onClose" 
+    position="bottom">
+      <van-picker
+        show-toolbar
+        title="家庭面积"
+        columns="{{ areas }}"
+        bind:cancel="onClose"
+        bind:confirm="onConfirm"
+        placeholder="请选择"
+      />
+    </van-popup>
+  </van-cell-group>
+  <van-button type="info" block round size="large" 
+    class="add-btn" bindtap="submit">保存地址</van-button>
+</view>

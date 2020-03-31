@@ -1,0 +1,9 @@
+/* pages/addAddress/addAddress.wxss */
+.addAddress van-cell-group van-field{
+  padding:20rpx;
+}
+.add-btn{
+  bottom:0;
+  position:fixed;
+  width:95%
+}

@@ -1,0 +1,156 @@
+<!--pages/yuesaoDetail/yuesaoDetail.wxml-->
+<!-- /* 月嫂详情页 */ -->
+<view wx:for="{{list}}" wx:key="index" class="container">
+  <view class="detail-bg" style="background:url({{}}) no-repeat top"></view>
+  <!-- 遮罩层 -->
+  <view class="detail-mask"></view>
+  <!-- 人物详情 -->
+  <view class="detail-info">
+    <!-- 左侧图片 -->
+    <image class="detail-img" src="{{item.fileID}}"></image>
+    <!-- 右侧人物介绍 -->
+    <view class="detail">
+      <view class="title">{{item.surname}}阿姨</view>
+      <view class="msg">
+        <view>班别：{{item.type}}   |   年龄：{{item.age}}岁</view>
+        <view>服务：{{item.served}} 户  |  经验：{{item.exp}}个月</view>
+        <view>状态：{{item.state}}  |  位置：{{item.position}}</view>
+      </view>
+      <view >
+       综合评价：
+          <van-rate
+          value="{{ item.eva }}"
+          size="{{ 15 }}"
+          allow-half
+          color="#ffd21e"
+          void-color="#ccc"
+          void-icon="star"
+          readonly
+          />
+      </view>
+      <view class="price">
+        <text>¥</text>
+        <text>{{item.price}}</text>
+        <text>/月</text>
+      </view>
+    </view>
+  </view>
+  <!-- 基本信息 -->
+  <van-tabs active="a" type="card" 
+  color="#e94941" swipeable class="tabs">
+    <van-tab title="基本信息" name="a" >
+      <view class="tab">
+        <view class="data">
+          <view class="left">籍贯</view>
+          <view class="right">{{item.region}}</view>
+        </view>
+        <view class="data">
+          <view class="left">当前城市</view>
+          <view class="right">{{item.position}}</view>
+        </view>
+        <view class="data">
+          <view class="left">民族</view>
+          <view class="right">{{item.nation}}</view>
+        </view>
+        <view class="data">
+          <view class="left">学历</view>
+          <view class="right">{{item.edu}}</view>
+        </view>
+        <view class="data">
+          <view class="left">类型</view>
+          <view class="right">{{item.title}}</view>
+        </view>
+        <view class="data">
+          <view class="left">属相</view>
+          <view class="right">{{item.zodiac}}</view>
+        </view>
+        <view class="data">
+          <view class="left">婚姻</view>
+          <view class="right">{{item.marry}}</view>
+        </view>
+      </view>
+    </van-tab>
+    <van-tab title="工作信息" name="b">
+      <view class="tab">
+        <view class="data">
+          <view class="left">工作能力</view>
+          <view class="right">{{item.ability}}</view>
+        </view>
+        <view class="data">
+          <view class="left">工作经验 </view>
+          <view class="right">{{item.exp}}个月</view>
+        </view>
+        <view class="data">
+          <view class="left">个人特长</view>
+          <view class="right">无</view>
+        </view>
+        <view class="data">
+          <view class="left">自我介绍</view>
+          <view class="right">{{item.introduce}}</view>
+        </view>
+      </view>
+    </van-tab>
+    <van-tab title="培训信息" name="c">
+      <view class="tab">
+        <view class="data">
+          暂无记录
+        </view>
+      </view>
+    </van-tab>
+  </van-tabs>
+  <!-- 证件照片 -->
+  <view class="id-photo">
+    <!-- 标题 -->
+    <view class="id-photo-head">
+      <image src="../../images/icon/证件照片.png" class="id-photo-icon"></image>
+      <view >
+        <text class="id-photo-title">证件照片</text>
+      </view>
+    </view>
+    <!-- 内容 -->
+    <view class="id-photo-body">暂无照片</view>
+  </view>
+  <!-- 评价 -->
+  <view class="comment"  >
+    <!-- 评价头 --> 
+    <view class="comment-head">
+      <image src="../../images/icon/评价.png" class="comment-icon"></image>
+      <view class="comment-title-left">
+        <text class="comment-title">雇主评价</text>    
+        <text class="comment-count">{{comment.length}}+</text>    
+      </view>
+      <view class="comment-title-right">好评度100%></view>
+    </view>
+    <!-- 评价主体 -->
+    <!-- 判断如果没有评论显示无内容页面 -->
+    <view wx:if="{{comment.length==0}}">暂无评论</view>
+    <view class="comment-body" wx:for="{{comment}}" 
+    wx:key="index" bindtap="jumpcomment" data-id="{{item.targetID}}">
+      <!-- 用户信息 -->
+      <view class="comment-body-umsg">
+        <image src="../../images/icon/头像.png" class="comment-body-icon"></image>
+        <view class="comment-body-user">
+        <view class="comment-body-uname">{{item.nickname}}</view>
+        <van-rate value="{{ item.score }}" size="{{ 13 }}"
+         class="comment-body-ustart" readonly/>
+      </view>
+    </view>
+    <!-- 评论内容 -->
+    <view >
+      <view class="comment-body-utext">{{item.context}}</view>
+      <view class="comment-body-uimg" >
+        <image wx:for="{{item.img}}" wx:key="index" src="{{item}}"></image>
+      </view>
+    </view>
+    </view>
+  </view>
+
+  <!-- 空白区域，顶起内容不被底部按钮遮盖 -->
+  <view class="placeholder"></view> 
+</view >
+<!-- 底部按钮 -->
+<view class="btn-view" >
+  <van-button color="linear-gradient(to right, #17abe3, #e94941)" bindtap="jumpCollection" >收藏</van-button>
+  <van-button color="linear-gradient(to left, #17abe3, #e94941)" bindtap="jumpOrder" >立即预约</van-button>
+
+</view>

@@ -1,0 +1,16 @@
+<!--pages/upd/upd.wxml-->
+<!-- 更新云数据库 -->
+  id<input type="text" value="{{id}}" bind:change="idChange"></input>
+  学历<input type="text" value="{{ edu }}" bind:change="eduChange"></input>
+  已服务<input type="number" value="{{ served }}" bind:change="servedChange"></input>
+  状态<input type="text" value="{{ state }}" bind:change="stateChange"></input>
+  位置<input type="text" value="{{position}}" bind:change="positionChange"></input>
+  评价<input type="number" value="{{eva}}" bind:change="evaChange"></input>
+  价钱<input type="number" value="{{price}}" bind:change="priceChange"></input>
+  民族<input type="text" value="{{nation}}" bind:change="nationChange"></input>
+  职称<input type="text" value="{{title}}" bind:change="titleChange"></input>
+  属相<input type="text" value="{{zodiac}}" bind:change="zodiacChange"></input>
+  婚姻<input type="text" value="{{marry}}" bind:change="marryChange"></input>
+  工作能力<input type="text" value="{{ability}}" bind:change="abilityChange"></input>
+  自我介绍<input type="text" value="{{introduce}}" bind:change="introduceChange"></input>
+  <button bindtap="submit">提交</button>

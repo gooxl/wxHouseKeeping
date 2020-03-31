@@ -1,0 +1,107 @@
+<!--pages/comment/comment.wxml-->
+<!-- 评论页 -->
+<view class="comment">
+  <van-tabs sticky  class="taps">
+    <van-tab title="全部" named="all" >
+      <view class="tap" wx:for="{{list}}" wx:key="index">
+       <!-- 用户头 -->
+        <view class="comment-user">
+          <image src="../../images/icon/头像.png" class="comment-user-icon"></image>
+          <view class="comment-uname">{{item.nickname}}</view>
+        </view>
+        <!-- 评价内容 -->
+        <view class="comment-context">
+        <!-- 评分 -->
+          <view class="comment-score">
+            <view>
+              <van-rate value="{{ item.score }}" size="{{ 15 }}"
+                class="comment-ustart" readonly/>
+            </view>
+            <!-- 日期 -->
+            <view class="comment-date" >{{item.date}}</view>
+          </view>
+          <!-- 内容 -->
+          <view>{{item.context}}</view>
+          <image wx:for="{{item.img}}" wx:key="index" src="{{item}}"
+          class="comment-img"></image>
+        </view>
+      </view>
+    </van-tab>
+    <van-tab title="好评" name="good" >
+      <view class="tap" wx:for="{{list}}" wx:key="index" wx:if="{{item.score>3}}">
+       <!-- 用户头 -->
+        <view class="comment-user">
+          <image src="../../images/icon/头像.png" class="comment-user-icon"></image>
+          <view class="comment-uname">{{item.nickname}}</view>
+        </view>
+        <!-- 评价内容 -->
+        <view class="comment-context">
+        <!-- 评分 -->
+          <view class="comment-score">
+            <view>
+              <van-rate value="{{ item.score }}" size="{{ 15 }}"
+                class="comment-ustart" readonly/>
+            </view>
+            <!-- 日期 -->
+            <view class="comment-date" >{{item.date}}</view>
+          </view>
+          <!-- 内容 -->
+          <view>{{item.context}}</view>
+          <image wx:for="{{item.img}}" wx:key="index" src="{{item}}"
+          class="comment-img"></image>
+        </view>
+      </view>
+    </van-tab>
+    <van-tab title="中评" name="medium" >     
+      <view class="tap" wx:for="{{list}}" wx:key="index" wx:if="{{item.score==3}}">
+       <!-- 用户头 -->
+        <view class="comment-user">
+          <image src="../../images/icon/头像.png" class="comment-user-icon"></image>
+          <view class="comment-uname">{{item.nickname}}</view>
+        </view>
+        <!-- 评价内容 -->
+        <view class="comment-context">
+        <!-- 评分 -->
+          <view class="comment-score">
+            <view>
+              <van-rate value="{{ item.score }}" size="{{ 15 }}"
+                class="comment-ustart" readonly/>
+            </view>
+            <!-- 日期 -->
+            <view class="comment-date" >{{item.date}}</view>
+          </view>
+          <!-- 内容 -->
+          <view>{{item.context}}</view>
+          <image wx:for="{{item.img}}" wx:key="index" src="{{item}}"
+          class="comment-img"></image>
+        </view>
+      </view>
+    </van-tab>
+    <van-tab title="差评" name="bad" >
+      <view class="tap" wx:for="{{list}}" wx:key="index" wx:if="{{item.score<3}}">
+       <!-- 用户头 -->
+        <view class="comment-user">
+          <image src="../../images/icon/头像.png" class="comment-user-icon"></image>
+          <view class="comment-uname">{{item.nickname}}</view>
+        </view>
+        <!-- 评价内容 -->
+        <view class="comment-context">
+        <!-- 评分 -->
+          <view class="comment-score">
+            <view>
+              <van-rate value="{{ item.score }}" size="{{ 15 }}"
+                class="comment-ustart" readonly/>
+            </view>
+            <!-- 日期 -->
+            <view class="comment-date" >{{item.date}}</view>
+          </view>
+          <!-- 内容 -->
+          <view>{{item.context}}</view>
+          <image wx:for="{{item.img}}" wx:key="index" src="{{item}}"
+          class="comment-img"></image>
+        </view>
+      </view>
+    </van-tab>
+  </van-tabs>
+
+</view>

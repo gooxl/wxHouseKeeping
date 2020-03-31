@@ -1,0 +1,64 @@
+
+<!-- 预约页面 -->
+<view class="page__bd">
+<!-- 服务类型 -->
+<view class="weui-cells__title">服务类型</view>
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell weui-cell_select">
+    <view class="weui-cell__bd">
+      <picker bindchange="serviceChange" value="{{service}}" range="{{servicelist}}">
+        <view class="weui-select">{{servicelist[service]}}</view>
+      </picker>
+    </view>
+  </view>
+</view>
+<!-- 地区 -->
+<view class="weui-cells__title">地区</view>
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell weui-cell_select">
+    <view class="weui-cell__bd"> 
+      <picker bindchange="cityChange" value="{{city}}" range="{{citys}}">
+        <view class="weui-select weui-select_in-select-after">{{citys[city]}}</view>
+      </picker>
+    </view>
+  </view>
+</view>
+<!-- 时间 -->
+<mp-cells title="服务时间">
+  <mp-cell prop="date" >
+    <picker data-field="date" mode="date" value="{{date}}" 
+    start="2020-03-01" end="2025-01-01" bindchange="dateChange">
+      <view class="weui-input">{{date}}</view>
+    </picker>
+  </mp-cell>
+</mp-cells>
+<!-- 电话 -->
+<view class="weui-cells__title">联系方式</view>
+<van-cell-group>
+ <van-field
+    value="{{ tel }}"
+    type="number"
+    placeholder="请输入手机号"
+    border="{{ false }}"
+    bind:change="telChange"
+  />
+</van-cell-group>
+<!-- 地址 -->
+<view class="weui-cells__title">家庭住址</view>
+<van-cell-group>
+  <van-field
+    value="{{ address }}"
+    type="textarea"
+    placeholder="请输入家庭住址"
+    autosize
+    border="{{ false }}"
+    bindtap="getLocation"
+
+  />
+</van-cell-group>
+<!-- 预约提交 -->
+<view class="weui-btn-area">
+  <button class="weui-btn" type="primary" bindtap="submit">提交</button>
+</view>
+
+</view>

@@ -1,0 +1,58 @@
+/* pages/comment/comment.wxss */
+/* 外层父元素 */
+.comment{
+  display: flex;
+  flex-direction: column; 
+  box-sizing: border-box;
+  
+}
+/* 标签 */
+.taps{
+
+
+}
+/* 标签内容 */
+.tap{
+  padding:20rpx 30rpx 10rpx 30rpx;
+  border:1rpx solid #eee;
+}
+/* 用户头 */
+.comment-user{
+  display: flex;
+
+}
+/* 用户头像 */
+.comment-user-icon{
+  width:80rpx;
+  height:80rpx;
+  padding-right:10rpx;
+}
+/* 用户名 */
+.comment-uname{
+  padding-top:13rpx;
+}
+/* 用户评论内容 */
+.comment-context{
+  padding-left:30rpx;
+  padding-right:30rpx;
+}
+.comment-score{
+  display: flex;
+  flex-flow: row;
+}
+.comment-score view{
+  width:50%;
+
+}
+.comment-date{
+  text-align: right;
+  color:#777;
+  /* font-size: 28rpx;
+  font-style:italic;  */
+}
+.comment-img{
+
+  width: 220rpx;
+  height: 220rpx;
+}
+

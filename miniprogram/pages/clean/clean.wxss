@@ -1,0 +1,73 @@
+/* pages/clean/clean.wxss */
+.clean{
+
+
+}
+.clean-tabs{
+  border-radius: 10%;
+}
+.hotsale{
+ height: 280rpx;
+ margin-top:20rpx;
+ padding:20rpx 30rpx 20rpx 30rpx;
+ background-color:#fff;
+}
+.hotsale-head{
+  padding-bottom:10rpx;
+  font-weight: bold;
+  font-size: 35rpx;
+}
+.hotsale-body{
+  display: flex;
+  padding:10rpx;
+  justify-content: space-between;
+}
+.hotsale-img{
+  width:320rpx;
+  height:200rpx
+}
+.recommend{
+
+ margin-top:20rpx;
+ padding:20rpx 30rpx 20rpx 30rpx;
+ background-color:#fff;
+}
+.recommend-head{
+  padding-bottom:10rpx;
+  font-weight: bold;
+  font-size: 35rpx;
+}
+.recommend-body{
+  
+}
+.rec-info{
+  display: flex;
+  height:240rpx;
+  padding-top:20rpx;
+
+}
+.rec-img{
+  width:38%;
+  height: 100%;
+  border-radius: 5%;
+  margin-right: 20rpx;
+}
+.rec-right{
+  width:62%;
+  position:relative;
+}
+.rec-title{
+  font-weight:bold;
+  vertical-align: text-top;
+}
+.rec-desc{
+  font-size: 26rpx;
+  color:#666;
+}
+.rec-price{
+  color:red;
+  font-size: 35rpx;
+  bottom:1%;
+  position:absolute;
+  font-family:"黑体";
+}

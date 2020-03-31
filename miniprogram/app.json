@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/order/order",
+    "pages/yuesaolist/yuesaolist",
+    "pages/yuesaoDetail/yuesaoDetail",
+    "pages/upd/upd",
+    "pages/comment/comment",
+    "pages/collection/collection",
+    "pages/clean/clean",
+    "pages/cleanYyj/cleanYyj",
+    "pages/cleanKt/cleanKt",
+    "pages/cleanCm/cleanCm",
+    "pages/cleanDsc/cleanDsc",
+    "pages/cleanZqxd/cleanZqxd",
+    "pages/cooking/cooking",
+    "pages/placeOrder/placeOrder",
+    "pages/addAddress/addAddress"
+    
+
+    
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "家政通",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+
+  "tabBar": {
+    "selectedColor": "#E94941",
+    "list": [
+      {
+      "pagePath": "pages/home/home",
+      "text": "首页",
+      "iconPath": "/images/icon/首页.png",
+      "selectedIconPath": "/images/icon/首页选中.png"
+    },
+    {
+      "pagePath": "pages/placeOrder/placeOrder",
+      "text": "订单",
+      "iconPath": "/images/icon/订单.png",
+      "selectedIconPath": "/images/icon/订单选中.png"
+    },
+    {
+      "pagePath": "pages/home/home",
+      "text": "我的",
+      "iconPath": "/images/icon/我的.png",
+      "selectedIconPath": "/images/icon/我的选中.png"
+    }
+    ]
+  }
+}
